@@ -5,12 +5,11 @@
     --lavender-dark: #4b3d60;
     --text-light: #f8f8ff;
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    
-    /* Font stacks */
+
     --heading-font: 'Playfair Display', serif;
     --body-font: 'Montserrat', sans-serif;
     
-    /* Font weights */
+
     --light: 300;
     --regular: 400;
     --medium: 500;
@@ -213,7 +212,7 @@ button:hover {
     color: var(--lavender-secondary);
 }
 
-/* Beautiful heading underline */
+
 h2 {
     font-family: var(--heading-font);
     font-weight: var(--medium);
