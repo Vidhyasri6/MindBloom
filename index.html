@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBloom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>🌸 MindBloom</h1>
+                <p class="quote" id="quote">"Your productivity companion"</p>
+            </div>
+            <button class="dark-mode-toggle" id="darkModeToggle">🌙</button>
+        </header>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="notes">Notes</div>
+            <div class="tab" data-tab="tasks">Tasks</div>
+            <div class="tab" data-tab="planner">Planner</div>
+        </div>
+
+        <div id="notes" class="tab-content active">
+            <textarea id="noteInput" placeholder="Write your note here..."></textarea>
+            <button id="addNote">Add Note</button>
+            <div id="notesContainer"></div>
+        </div>
+
+        <div id="tasks" class="tab-content">
+            <input type="text" id="taskInput" placeholder="New task...">
+            <button id="addTask">Add Task</button>
+            <div id="taskList"></div>
+        </div>
+
+        <div id="planner" class="tab-content">
+            <input type="date" id="eventDate">
+            <input type="text" id="eventText" placeholder="Event details">
+            <button id="addEvent">Add Event</button>
+            <div id="eventList"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js">
+    </script>
+</body>
+</html>

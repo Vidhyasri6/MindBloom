@@ -1,0 +1,234 @@
+:root {
+    --lavender-primary: #967bb6;
+    --lavender-secondary: #b399d4;
+    --lavender-light: #e6e6fa;
+    --lavender-dark: #4b3d60;
+    --text-light: #f8f8ff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+    /* Font stacks */
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Montserrat', sans-serif;
+    
+    /* Font weights */
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: var(--body-font);
+    font-weight: var(--regular);
+    background-color: var(--lavender-light);
+    color: #333;
+    line-height: 1.6;
+}
+
+body.dark-mode {
+    background-color: #2a2a2a;
+    color: var(--text-light);
+    font-weight: var(--light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    font-weight: var(--bold);
+    font-size: 2.4rem;
+    color: var(--lavender-dark);
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+.dark-mode h1 {
+    color: var(--lavender-secondary);
+}
+
+.quote {
+    font-family: var(--heading-font);
+    font-style: italic;
+    font-weight: var(--regular);
+    color: var(--lavender-primary);
+    margin: 10px 0;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab {
+    font-family: var(--body-font);
+    font-weight: var(--medium);
+    letter-spacing: 0.3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+}
+
+.dark-mode .tab {
+    background: #333;
+    border-color: #555;
+    color: white;
+}
+
+.tab.active {
+    background: var(--lavender-primary);
+    color: white;
+    border-color: var(--lavender-primary);
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: white;
+    border-radius: 0 5px 5px 5px;
+    box-shadow: var(--shadow);
+}
+
+.dark-mode .tab-content {
+    background: #333;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+input, textarea {
+    font-family: var(--body-font);
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.dark-mode input, .dark-mode textarea {
+    background: #444;
+    border-color: #555;
+    color: white;
+}
+
+button {
+    font-family: var(--body-font);
+    font-weight: var(--medium);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 10px 15px;
+    background: var(--lavender-primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+button:hover {
+    background: var(--lavender-dark);
+}
+
+.note, .task, .event {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.dark-mode .note, .dark-mode .task, .dark-mode .event {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.note-date, .event-date {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.dark-mode .note-date, .dark-mode .event-date {
+    color: #aaa;
+}
+
+.delete-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-family: var(--body-font);
+}
+
+.task-checkbox {
+    margin-right: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--lavender-dark);
+}
+
+.dark-mode .dark-mode-toggle {
+    color: var(--lavender-secondary);
+}
+
+/* Beautiful heading underline */
+h2 {
+    font-family: var(--heading-font);
+    font-weight: var(--medium);
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--lavender-primary);
+}
