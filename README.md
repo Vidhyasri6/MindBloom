@@ -2,10 +2,12 @@
 Minimalist Productivity app
 
 ✨ Features
+
 **All-in-One Organization**
 📝 Rich text notes with timestamps
 ✅ Interactive task manager with completion tracking
 📆 Date-based event planner
+
 
 **Beautiful Design**
 Soothing lavender color scheme
